@@ -1,0 +1,19 @@
+title = "Hugo Template"
+googleAnalytics = ""
+disableFastRender = true
+languageCode = "bs-bs"
+defaultContentLanguage = "bs"
+
+[build]
+  writeStats = true
+
+[params]
+description = ""
+image = "/media/brand/og-image.jpg"
+
+[markup]
+
+[markup.goldmark]
+
+[markup.goldmark.renderer]
+unsafe = true

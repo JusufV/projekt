@@ -1,0 +1,10 @@
+public
+resources
+node_modules
+static/node_modules
+.idea
+design
+.env
+
+# Local Netlify folder
+.netlify

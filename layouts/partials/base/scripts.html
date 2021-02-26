@@ -1,0 +1,14 @@
+{{ $cookies := resources.Get "scripts/cookies.js" }}
+{{ $links := resources.Get "scripts/external-links.js" }}
+{{ $lazyload := resources.Get "/scripts/lazyload.js" }}
+{{ $lightgallery := resources.Get "/scripts/lightgallery.js" }}
+{{ $swiper := resources.Get "/scripts/swiper.js" }}
+
+{{ $bundleItems := slice $cookies $links $lazyload $lightgallery }}
+
+{{ $bundleJs := $bundleItems | resources.Concat "scripts/bundle.js" | js.Build }}
+<script defer src="{{ $bundleJs.Permalink }}"></script>
+
+<!-- if we need to add a video that needs to be opened with lg -->
+<!-- <script type="text/javascript" src="/scripts/vendors/lg-videos.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js" integrity="sha512-b4rL1m5b76KrUhDkj2Vf14Y0l1NtbiNXwV+SzOzLGv6Tz1roJHa70yr8RmTUswrauu2Wgb/xBJPR8v80pQYKtQ==" crossorigin="anonymous"></script>
